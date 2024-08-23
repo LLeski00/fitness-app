@@ -1,0 +1,13 @@
+.navbar {
+    top: 0;
+}
+
+.navbar-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(202, 131, 0);
+    box-shadow: 10px 10px 10px black;
+    font-size: 2vw;
+}

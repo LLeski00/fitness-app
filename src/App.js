@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style/App.css";
+import Home from "./Home";
+import Navbar from "./Navbar";
+import BottomBar from "./BottomBar";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [route, setRoute] = useState("Home");
+
+    return (
+        <div className="App">
+            <div className="app-content">
+                <Navbar />
+
+                {route === "Home" && <Home />}
+
+                <BottomBar route={route} setRoute={setRoute} />
+            </div>
+        </div>
+    );
 }
 
 export default App;

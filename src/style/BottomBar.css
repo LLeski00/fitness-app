@@ -1,0 +1,27 @@
+.bottom-bar {
+    width: 100%;
+    bottom: 0;
+}
+
+.bottom-bar-content {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    box-shadow: 10px 10px 10px 10px black;
+}
+
+.bottom-bar-icon {
+    background-color: rgb(202, 131, 0);
+    width: 100%;
+    border: 0.1vw solid rgb(177, 115, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-bar-icon svg {
+    width: 5vw;
+    height: auto;
+    margin: 1vh;
+}

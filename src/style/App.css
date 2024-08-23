@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body,
+#root,
+.App,
+.app-content {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(48, 48, 48);
+    color: aliceblue;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
