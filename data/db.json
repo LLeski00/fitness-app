@@ -1,0 +1,16 @@
+{
+    "exercises": [
+        {
+            "name": "Pull-ups",
+            "id": "0"
+        },
+        {
+            "name": "Bench press",
+            "id": "1"
+        },
+        {
+            "name": "Squats",
+            "id": "2"
+        }
+    ]
+}

@@ -5,46 +5,54 @@ import "./style/BottomBar.css";
 import { useEffect } from "react";
 
 const BottomBar = ({ route, setRoute }) => {
-    const homeIcon = "home-icon";
-    const trainIcon = "train-icon";
-    const settingsIcon = "settings-icon";
+    const homeIcon = "home-component";
+    const trainIcon = "train-component";
+    const settingsIcon = "settings-component";
 
     useEffect(() => {
         routeSwitch();
-    }, []);
+    }, [route]);
+
+    const unclickSelection = () => {
+        let selections = document.getElementsByClassName("bottom-bar-icon");
+        for (let i = 0; i < selections.length; i++)
+            selections[i].style.opacity = "100%";
+    };
 
     const routeSwitch = () => {
-        let icon;
+        unclickSelection();
+        let icon = document.getElementById(route);
 
-        switch (route) {
-            case "Home":
-                icon = document.getElementById(homeIcon);
-                icon.style.opacity = "70%";
-                break;
-            case "Train":
-                icon = document.getElementById(trainIcon);
-                icon.style.opacity = "70%";
-                break;
-            case "Settings":
-                icon = document.getElementById(settingsIcon);
-                icon.style.opacity = "70%";
-                break;
-            default:
-                alert("The route doesn't exist! Route: ", route);
-                break;
+        if (!icon) {
+            alert("The route doesn't exist! Route: ", route);
+            return;
         }
+
+        icon.style.opacity = "70%";
     };
 
     return (
         <div className="bottom-bar">
             <div className="bottom-bar-content">
-                <div id={homeIcon} className="bottom-bar-icon">
+                <div
+                    id={homeIcon}
+                    onClick={() => setRoute(homeIcon)}
+                    className="bottom-bar-icon"
+                >
                     <GoHomeFill />
                 </div>
-                <div id={trainIcon} className="bottom-bar-icon">
+                <div
+                    id={trainIcon}
+                    onClick={() => setRoute(trainIcon)}
+                    className="bottom-bar-icon"
+                >
                     <GiMuscleUp />
                 </div>
-                <div id={settingsIcon} className="bottom-bar-icon">
+                <div
+                    id={settingsIcon}
+                    onClick={() => setRoute(settingsIcon)}
+                    className="bottom-bar-icon"
+                >
                     <RiSettingsFill />
                 </div>
             </div>
