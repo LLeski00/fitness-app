@@ -1,5 +1,6 @@
 .bottom-bar {
     width: 100%;
+    position: sticky;
     bottom: 0;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .bottom-bar-icon svg {
-    width: 5vw;
-    height: auto;
+    width: 8vw;
+    height: 8vh;
     margin: 1vh;
 }

@@ -1,6 +1,7 @@
 import { GoHomeFill } from "react-icons/go";
 import { RiSettingsFill } from "react-icons/ri";
 import { GiMuscleUp } from "react-icons/gi";
+import { FaPlus } from "react-icons/fa";
 import "./style/BottomBar.css";
 import { useEffect } from "react";
 
@@ -8,6 +9,7 @@ const BottomBar = ({ route, setRoute }) => {
     const homeIcon = "home-component";
     const trainIcon = "train-component";
     const settingsIcon = "settings-component";
+    const newSessionIcon = "new-session-component";
 
     useEffect(() => {
         routeSwitch();
@@ -40,6 +42,13 @@ const BottomBar = ({ route, setRoute }) => {
                     className="bottom-bar-icon"
                 >
                     <GoHomeFill />
+                </div>
+                <div
+                    id={newSessionIcon}
+                    onClick={() => setRoute(newSessionIcon)}
+                    className="bottom-bar-icon"
+                >
+                    <FaPlus />
                 </div>
                 <div
                     id={trainIcon}

@@ -11,6 +11,10 @@
         {
             "name": "Squats",
             "id": "2"
+        },
+        {
+            "name": "Rows",
+            "id": "3"
         }
     ]
 }

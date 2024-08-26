@@ -5,6 +5,7 @@ import BottomBar from "./BottomBar";
 import { useState } from "react";
 import Train from "./Train";
 import Settings from "./Settings";
+import NewSession from "./NewSession";
 
 function App() {
     const [route, setRoute] = useState("home-component");
@@ -17,6 +18,7 @@ function App() {
                 {route === "home-component" && <Home />}
                 {route === "train-component" && <Train />}
                 {route === "settings-component" && <Settings />}
+                {route === "new-session-component" && <NewSession />}
 
                 <BottomBar route={route} setRoute={setRoute} />
             </div>
