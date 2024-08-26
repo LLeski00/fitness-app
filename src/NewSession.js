@@ -5,7 +5,6 @@ import { FaMinus } from "react-icons/fa";
 
 const NewSession = () => {
     const [exercises, setExercises] = useState(null);
-    const [session, setSession] = useState(null);
 
     useEffect(() => {
         fetch("http://localhost:3001/exercises", {
@@ -18,9 +17,22 @@ const NewSession = () => {
                 return response.json();
             })
             .then(function (myJson) {
+                for (let i = 0; i < myJson.length; i++) myJson[i].sets = 0;
                 setExercises(myJson);
             });
     }, []);
+
+    const handleMinusClick = (id) => {
+        let temp = [...exercises];
+        temp[id] = { ...temp[id], sets: temp[id].sets - 1 };
+        setExercises(temp);
+    };
+
+    const handlePlusClick = (id) => {
+        let temp = [...exercises];
+        temp[id] = { ...temp[id], sets: temp[id].sets + 1 };
+        setExercises(temp);
+    };
 
     return (
         <div className="new-session">
@@ -32,9 +44,15 @@ const NewSession = () => {
                             <h2>{exercise.name}</h2>
                             <p>Sets: </p>
                             <div className="set-counter">
-                                <FaMinus />
-                                <p>0</p>
-                                <FaPlus />
+                                <FaMinus
+                                    onClick={() =>
+                                        handleMinusClick(exercise.id)
+                                    }
+                                />
+                                <p>{exercise.sets}</p>
+                                <FaPlus
+                                    onClick={() => handlePlusClick(exercise.id)}
+                                />
                             </div>
                         </div>
                     ))}
