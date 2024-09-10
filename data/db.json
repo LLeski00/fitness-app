@@ -1,20 +1,70 @@
 {
-    "exercises": [
+  "exercises": [
+    {
+      "name": "Pull-ups",
+      "id": "0"
+    },
+    {
+      "name": "Bench press",
+      "id": "1"
+    },
+    {
+      "name": "Squats",
+      "id": "2"
+    },
+    {
+      "name": "Rows",
+      "id": "3"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "aa22",
+      "name": "ame...",
+      "exercises": [
         {
-            "name": "Pull-ups",
-            "id": "0"
+          "name": "Pull-ups",
+          "id": "0",
+          "sets": 1
         },
         {
-            "name": "Bench press",
-            "id": "1"
-        },
-        {
-            "name": "Squats",
-            "id": "2"
-        },
-        {
-            "name": "Rows",
-            "id": "3"
+          "name": "Squats",
+          "id": "2",
+          "sets": 1
         }
-    ]
+      ]
+    },
+    {
+      "id": "aa86",
+      "name": "Freeze",
+      "exercises": [
+        {
+          "name": "Squats",
+          "id": "2",
+          "sets": 5
+        }
+      ]
+    },
+    {
+      "id": "1f17",
+      "name": "Session name...",
+      "exercises": []
+    },
+    {
+      "id": "d04d",
+      "name": "kikikikiki",
+      "exercises": [
+        {
+          "name": "Pull-ups",
+          "id": "0",
+          "sets": 6
+        },
+        {
+          "name": "Rows",
+          "id": "3",
+          "sets": 1
+        }
+      ]
+    }
+  ]
 }

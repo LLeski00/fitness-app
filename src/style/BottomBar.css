@@ -13,9 +13,9 @@
 }
 
 .bottom-bar-icon {
-    background-color: rgb(202, 131, 0);
+    background-color: crimson;
     width: 100%;
-    border: 0.1vw solid rgb(177, 115, 0);
+    border: 0.1vw solid rgb(196, 17, 53);
     display: flex;
     justify-content: center;
     align-items: center;
