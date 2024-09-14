@@ -16,9 +16,9 @@ function App() {
                 <Navbar />
 
                 {route === "home-component" && <Home />}
+                {route === "new-session-component" && <NewSession />}
                 {route === "train-component" && <Train />}
                 {route === "settings-component" && <Settings />}
-                {route === "new-session-component" && <NewSession />}
 
                 <BottomBar route={route} setRoute={setRoute} />
             </div>

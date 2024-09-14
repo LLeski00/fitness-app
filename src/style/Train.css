@@ -4,15 +4,4 @@
     height: 100%;
     overflow: auto;
     font-size: 2vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.session {
-    overflow: hidden;
-    background-color: rgb(67, 67, 67);
-    margin: 2vh;
-    box-shadow: 10px 10px 10px black;
-    font-size: 2vh;
-    border-radius: 2vw;
 }

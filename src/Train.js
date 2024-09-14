@@ -1,43 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import SessionSelect from "./SessionSelect";
 import "./style/Train.css";
+import Workout from "./Workout";
 
 const Train = () => {
-    const [sessions, setSessions] = useState(null);
-
-    useEffect(() => {
-        fetch("http://localhost:3001/sessions", {
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-        })
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                setSessions(myJson);
-            });
-    }, []);
+    const [isSessionSelected, setIsSessionSelected] = useState(false);
+    const [sessionSelected, setSessionSelected] = useState(null);
 
     return (
         <div className="train">
             <div className="train-content">
-                <h1>Train</h1>
-
-                <div className="sessions">
-                    {sessions &&
-                        sessions.map((session) => (
-                            <div key={session.id} className="session">
-                                <h2>{session.name}</h2>
-                                {session.exercises.map((exercise) => (
-                                    <div className="session-exercises">
-                                        <p>{exercise.name}</p>
-                                        <p>Sets: {exercise.sets}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                </div>
+                {!isSessionSelected && (
+                    <SessionSelect
+                        setIsSessionSelected={setIsSessionSelected}
+                        setSessionSelected={setSessionSelected}
+                    />
+                )}
+                {isSessionSelected && <Workout session={sessionSelected} />}
             </div>
         </div>
     );

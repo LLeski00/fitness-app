@@ -18,7 +18,7 @@ const BottomBar = ({ route, setRoute }) => {
     const unclickSelection = () => {
         let selections = document.getElementsByClassName("bottom-bar-icon");
         for (let i = 0; i < selections.length; i++)
-            selections[i].style.opacity = "100%";
+            selections[i].style.backgroundColor = "crimson";
     };
 
     const routeSwitch = () => {
@@ -30,7 +30,7 @@ const BottomBar = ({ route, setRoute }) => {
             return;
         }
 
-        icon.style.opacity = "70%";
+        icon.style.backgroundColor = "rgb(196, 17, 53)";
     };
 
     return (

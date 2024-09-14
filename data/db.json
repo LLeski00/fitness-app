@@ -19,50 +19,56 @@
   ],
   "sessions": [
     {
-      "id": "aa22",
-      "name": "ame...",
+      "id": "84ef",
+      "name": "zjr",
       "exercises": [
         {
           "name": "Pull-ups",
           "id": "0",
-          "sets": 1
-        },
-        {
-          "name": "Squats",
-          "id": "2",
-          "sets": 1
+          "sets": 7
         }
       ]
     },
     {
-      "id": "aa86",
-      "name": "Freeze",
+      "id": "8655",
+      "name": "Leg day",
       "exercises": [
         {
           "name": "Squats",
           "id": "2",
+          "sets": 15
+        }
+      ]
+    },
+    {
+      "id": "d18a",
+      "name": "Chest",
+      "exercises": [
+        {
+          "name": "Bench press",
+          "id": "1",
           "sets": 5
         }
       ]
     },
     {
-      "id": "1f17",
-      "name": "Session name...",
-      "exercises": []
-    },
-    {
-      "id": "d04d",
-      "name": "kikikikiki",
+      "id": "d74b",
+      "name": "hihi",
       "exercises": [
         {
           "name": "Pull-ups",
           "id": "0",
-          "sets": 6
+          "sets": 1
         },
         {
-          "name": "Rows",
-          "id": "3",
+          "name": "Bench press",
+          "id": "1",
           "sets": 1
+        },
+        {
+          "name": "Squats",
+          "id": "2",
+          "sets": 2
         }
       ]
     }
