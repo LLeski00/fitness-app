@@ -1,0 +1,15 @@
+.workout,
+.workout-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.workout-exercise {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

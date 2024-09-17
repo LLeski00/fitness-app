@@ -8,7 +8,6 @@ const Workout = ({ session }) => {
     const [currentSet, setCurrentSet] = useState(0);
 
     useEffect(() => {
-        console.log(session);
         createWorkout();
     }, []);
 
