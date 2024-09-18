@@ -33,6 +33,12 @@ const Timer = ({
         else return false;
     };
 
+    const saveSetTime = () => {
+        let temp = workout;
+        temp.exercises[currentExerciseIndex].timeOfSet[currentSet] = timer;
+        setWorkout(temp);
+    };
+
     const handleCurrentSet = () => {
         if (currentSet + 1 === currentExercise.sets) {
             setCurrentExercise(workout.exercises[currentExerciseIndex + 1]);
@@ -45,12 +51,27 @@ const Timer = ({
 
     const isWorkoutOngoing = () => {
         if (!rest) {
+            saveSetTime();
             if (checkEndOfWorkout()) return false;
         } else {
             handleCurrentSet();
         }
 
         return true;
+    };
+
+    const saveWorkout = () => {
+        let temp = { session: workout };
+
+        fetch("http://localhost:3001/history", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(temp),
+        })
+            .then((response) => response.json())
+            .catch((error) => console.error(error));
     };
 
     const handleTimerClick = () => {
@@ -62,6 +83,7 @@ const Timer = ({
             setStop(false);
         } else {
             setTimer("Workout finished");
+            saveWorkout();
         }
     };
 

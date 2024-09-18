@@ -13,8 +13,6 @@ const Workout = ({ session }) => {
 
     const createWorkout = () => {
         let temp = session;
-        temp.rest = false;
-        temp.currentExercise = 0;
         for (let i = 0; i < temp.exercises.length; i++) {
             temp.exercises[i].timeOfSet = [];
             for (let j = 0; j < temp.exercises[i].sets; j++) {

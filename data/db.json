@@ -19,28 +19,6 @@
   ],
   "sessions": [
     {
-      "id": "84ef",
-      "name": "zjr",
-      "exercises": [
-        {
-          "name": "Pull-ups",
-          "id": "0",
-          "sets": 7
-        }
-      ]
-    },
-    {
-      "id": "8655",
-      "name": "Leg day",
-      "exercises": [
-        {
-          "name": "Squats",
-          "id": "2",
-          "sets": 15
-        }
-      ]
-    },
-    {
       "id": "d18a",
       "name": "Chest",
       "exercises": [
@@ -71,6 +49,42 @@
           "sets": 2
         }
       ]
+    }
+  ],
+  "history": [
+    {
+      "id": "03bb",
+      "session": {
+        "id": "d74b",
+        "name": "hihi",
+        "exercises": [
+          {
+            "name": "Pull-ups",
+            "id": "0",
+            "sets": 1,
+            "timeOfSet": [
+              2
+            ]
+          },
+          {
+            "name": "Bench press",
+            "id": "1",
+            "sets": 1,
+            "timeOfSet": [
+              3
+            ]
+          },
+          {
+            "name": "Squats",
+            "id": "2",
+            "sets": 2,
+            "timeOfSet": [
+              4,
+              5
+            ]
+          }
+        ]
+      }
     }
   ]
 }
