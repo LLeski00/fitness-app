@@ -14,6 +14,7 @@ const Timer = ({
     const [rest, setRest] = useState(false);
     const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
     const numOfExercises = workout.exercises.length;
+    const [workoutFinished, setWorkoutFinished] = useState(false);
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -75,6 +76,8 @@ const Timer = ({
     };
 
     const handleTimerClick = () => {
+        if (workoutFinished) return;
+
         setStop(true);
 
         if (isWorkoutOngoing()) {
@@ -82,6 +85,7 @@ const Timer = ({
             setTimer(0);
             setStop(false);
         } else {
+            setWorkoutFinished(true);
             setTimer("Workout finished");
             saveWorkout();
         }

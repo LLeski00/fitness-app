@@ -15,72 +15,226 @@
     {
       "name": "Rows",
       "id": "3"
+    },
+    {
+      "name": "Bicep curls",
+      "id": "4"
+    },
+    {
+      "name": "Lat pulldown",
+      "id": "5"
+    },
+    {
+      "name": "Lunges",
+      "id": "6"
+    },
+    {
+      "name": "Triceps pushdown",
+      "id": "7"
+    },
+    {
+      "name": "Pec deck flies",
+      "id": "8"
+    },
+    {
+      "name": "Bulgarian squats",
+      "id": "9"
+    },
+    {
+      "name": "Push-ups",
+      "id": "10"
+    },
+    {
+      "name": "Leg extensions",
+      "id": "11"
+    },
+    {
+      "name": "Leg curls",
+      "id": "12"
     }
   ],
   "sessions": [
     {
-      "id": "d18a",
-      "name": "Chest",
-      "exercises": [
-        {
-          "name": "Bench press",
-          "id": "1",
-          "sets": 5
-        }
-      ]
-    },
-    {
-      "id": "d74b",
-      "name": "hihi",
+      "id": "416b",
+      "name": "Upper",
       "exercises": [
         {
           "name": "Pull-ups",
           "id": "0",
-          "sets": 1
+          "sets": 3
         },
         {
           "name": "Bench press",
           "id": "1",
-          "sets": 1
+          "sets": 3
         },
+        {
+          "name": "Rows",
+          "id": "3",
+          "sets": 3
+        },
+        {
+          "name": "Bicep curls",
+          "id": "4",
+          "sets": 3
+        },
+        {
+          "name": "Triceps pushdown",
+          "id": "7",
+          "sets": 3
+        },
+        {
+          "name": "Pec deck flies",
+          "id": "8",
+          "sets": 3
+        }
+      ]
+    },
+    {
+      "id": "9fbd",
+      "name": "Lower",
+      "exercises": [
         {
           "name": "Squats",
           "id": "2",
-          "sets": 2
+          "sets": 4
+        },
+        {
+          "name": "Lunges",
+          "id": "6",
+          "sets": 4
+        },
+        {
+          "name": "Leg extensions",
+          "id": "11",
+          "sets": 4
+        },
+        {
+          "name": "Leg curls",
+          "id": "12",
+          "sets": 4
         }
       ]
     }
   ],
   "history": [
     {
-      "id": "03bb",
+      "id": "9262",
       "session": {
-        "id": "d74b",
-        "name": "hihi",
+        "id": "416b",
+        "name": "Upper",
         "exercises": [
           {
             "name": "Pull-ups",
             "id": "0",
-            "sets": 1,
+            "sets": 3,
             "timeOfSet": [
-              2
+              3,
+              1,
+              1
             ]
           },
           {
             "name": "Bench press",
             "id": "1",
-            "sets": 1,
+            "sets": 3,
             "timeOfSet": [
-              3
+              0,
+              0,
+              0
             ]
           },
           {
+            "name": "Rows",
+            "id": "3",
+            "sets": 3,
+            "timeOfSet": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Bicep curls",
+            "id": "4",
+            "sets": 3,
+            "timeOfSet": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Triceps pushdown",
+            "id": "7",
+            "sets": 3,
+            "timeOfSet": [
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "Pec deck flies",
+            "id": "8",
+            "sets": 3,
+            "timeOfSet": [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "852b",
+      "session": {
+        "id": "9fbd",
+        "name": "Lower",
+        "exercises": [
+          {
             "name": "Squats",
             "id": "2",
-            "sets": 2,
+            "sets": 4,
             "timeOfSet": [
               4,
-              5
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "name": "Lunges",
+            "id": "6",
+            "sets": 4,
+            "timeOfSet": [
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "name": "Leg extensions",
+            "id": "11",
+            "sets": 4,
+            "timeOfSet": [
+              0,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Leg curls",
+            "id": "12",
+            "sets": 4,
+            "timeOfSet": [
+              1,
+              0,
+              0,
+              1
             ]
           }
         ]
