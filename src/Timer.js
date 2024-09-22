@@ -27,7 +27,7 @@ const Timer = ({
 
     const checkEndOfWorkout = () => {
         if (
-            currentSet + 1 === currentExercise.sets &&
+            currentSet + 1 === currentExercise.sets.length &&
             currentExerciseIndex + 1 === numOfExercises
         )
             return true;
@@ -36,12 +36,22 @@ const Timer = ({
 
     const saveSetTime = () => {
         let temp = workout;
-        temp.exercises[currentExerciseIndex].timeOfSet[currentSet] = timer;
+        temp.exercises[currentExerciseIndex].sets[currentSet].time = timer;
+        if (timer < 53)
+            temp.exercises[currentExerciseIndex].sets[currentSet].feedback =
+                "Weight too high!";
+        else if (timer > 67)
+            temp.exercises[currentExerciseIndex].sets[currentSet].feedback =
+                "Weight too low!";
+        else
+            temp.exercises[currentExerciseIndex].sets[currentSet].feedback =
+                "Great set!";
+
         setWorkout(temp);
     };
 
     const handleCurrentSet = () => {
-        if (currentSet + 1 === currentExercise.sets) {
+        if (currentSet + 1 === currentExercise.sets.length) {
             setCurrentExercise(workout.exercises[currentExerciseIndex + 1]);
             setCurrentExerciseIndex(currentExerciseIndex + 1);
             setCurrentSet(0);

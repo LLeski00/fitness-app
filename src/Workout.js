@@ -14,9 +14,11 @@ const Workout = ({ session }) => {
     const createWorkout = () => {
         let temp = session;
         for (let i = 0; i < temp.exercises.length; i++) {
-            temp.exercises[i].timeOfSet = [];
-            for (let j = 0; j < temp.exercises[i].sets; j++) {
-                temp.exercises[i].timeOfSet[j] = 0;
+            let numOfSets = temp.exercises[i].sets;
+            temp.exercises[i].sets = [];
+            for (let j = 0; j < numOfSets; j++) {
+                temp.exercises[i].sets[j] = { time: 0, feedback: "" };
+                console.log(temp);
             }
         }
 

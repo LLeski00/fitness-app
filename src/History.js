@@ -35,13 +35,14 @@ const History = () => {
                                 >
                                     <h3>{exercise.name}</h3>
                                     <h3>Sets:</h3>
-                                    {exercise.timeOfSet.map((set, i) => (
+                                    {exercise.sets.map((set, i) => (
                                         <div
                                             key={i}
                                             className="history-workout-exercise-set"
                                         >
                                             <p>
-                                                {i + 1}. Set: {set}s
+                                                {i + 1}. Set: {set.time}s,{" "}
+                                                {set.feedback}
                                             </p>
                                         </div>
                                     ))}

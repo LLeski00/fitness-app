@@ -55,7 +55,7 @@
   ],
   "sessions": [
     {
-      "id": "416b",
+      "id": "cd74",
       "name": "Upper",
       "exercises": [
         {
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": "9fbd",
+      "id": "141a",
       "name": "Lower",
       "exercises": [
         {
@@ -119,122 +119,117 @@
   ],
   "history": [
     {
-      "id": "9262",
+      "id": "af0a",
       "session": {
-        "id": "416b",
+        "id": "cd74",
         "name": "Upper",
         "exercises": [
           {
             "name": "Pull-ups",
             "id": "0",
-            "sets": 3,
-            "timeOfSet": [
-              3,
-              1,
-              1
+            "sets": [
+              {
+                "time": 56,
+                "feedback": "Great set!"
+              },
+              {
+                "time": 1,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 1,
+                "feedback": "Weight too high!"
+              }
             ]
           },
           {
             "name": "Bench press",
             "id": "1",
-            "sets": 3,
-            "timeOfSet": [
-              0,
-              0,
-              0
+            "sets": [
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 1,
+                "feedback": "Weight too high!"
+              }
             ]
           },
           {
             "name": "Rows",
             "id": "3",
-            "sets": 3,
-            "timeOfSet": [
-              0,
-              0,
-              0
+            "sets": [
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 70,
+                "feedback": "Weight too low!"
+              }
             ]
           },
           {
             "name": "Bicep curls",
             "id": "4",
-            "sets": 3,
-            "timeOfSet": [
-              0,
-              0,
-              0
+            "sets": [
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              }
             ]
           },
           {
             "name": "Triceps pushdown",
             "id": "7",
-            "sets": 3,
-            "timeOfSet": [
-              0,
-              0,
-              1
+            "sets": [
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              }
             ]
           },
           {
             "name": "Pec deck flies",
             "id": "8",
-            "sets": 3,
-            "timeOfSet": [
-              0,
-              0,
-              0
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "852b",
-      "session": {
-        "id": "9fbd",
-        "name": "Lower",
-        "exercises": [
-          {
-            "name": "Squats",
-            "id": "2",
-            "sets": 4,
-            "timeOfSet": [
-              4,
-              0,
-              0,
-              1
-            ]
-          },
-          {
-            "name": "Lunges",
-            "id": "6",
-            "sets": 4,
-            "timeOfSet": [
-              0,
-              0,
-              1,
-              0
-            ]
-          },
-          {
-            "name": "Leg extensions",
-            "id": "11",
-            "sets": 4,
-            "timeOfSet": [
-              0,
-              1,
-              0,
-              0
-            ]
-          },
-          {
-            "name": "Leg curls",
-            "id": "12",
-            "sets": 4,
-            "timeOfSet": [
-              1,
-              0,
-              0,
-              1
+            "sets": [
+              {
+                "time": 1,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              },
+              {
+                "time": 0,
+                "feedback": "Weight too high!"
+              }
             ]
           }
         ]
