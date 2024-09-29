@@ -13,3 +13,7 @@
     align-items: center;
     background-color: rgb(34, 34, 34);
 }
+
+.feedback-animation {
+    position: absolute;
+}

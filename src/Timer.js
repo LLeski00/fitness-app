@@ -15,6 +15,7 @@ const Timer = ({
     const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
     const numOfExercises = workout.exercises.length;
     const [workoutFinished, setWorkoutFinished] = useState(false);
+    const [feedback, setFeedback] = useState(null);
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -24,6 +25,24 @@ const Timer = ({
         }, 1000);
         return () => clearTimeout(timeoutId);
     }, [timer, stop]);
+
+    useEffect(() => {
+        let temp = document.getElementById("feedback");
+        temp.style.opacity = "0%";
+
+        if (!feedback) return;
+
+        temp.style.transition = "opacity linear 2s";
+        if (feedback === "Great set!") temp.style.color = "green";
+        else temp.style.color = "red";
+        temp.style.opacity = "100%";
+        setTimeout(() => {
+            temp.style.opacity = "0%";
+        }, 2000);
+        setTimeout(() => {
+            setFeedback(null);
+        }, 4000);
+    }, [feedback]);
 
     const checkEndOfWorkout = () => {
         if (
@@ -37,16 +56,20 @@ const Timer = ({
     const saveSetTime = () => {
         let temp = workout;
         temp.exercises[currentExerciseIndex].sets[currentSet].time = timer;
-        if (timer < 53)
+        if (timer < 53) {
             temp.exercises[currentExerciseIndex].sets[currentSet].feedback =
                 "Weight too high!";
-        else if (timer > 67)
+        } else if (timer > 67) {
             temp.exercises[currentExerciseIndex].sets[currentSet].feedback =
                 "Weight too low!";
-        else
+        } else {
             temp.exercises[currentExerciseIndex].sets[currentSet].feedback =
                 "Great set!";
+        }
 
+        setFeedback(
+            temp.exercises[currentExerciseIndex].sets[currentSet].feedback
+        );
         setWorkout(temp);
     };
 
@@ -96,7 +119,6 @@ const Timer = ({
             setStop(false);
         } else {
             setWorkoutFinished(true);
-            setTimer("Workout finished");
             saveWorkout();
         }
     };
@@ -106,7 +128,11 @@ const Timer = ({
             <div className="timer-content">
                 {rest && <p>Rest</p>}
                 {!rest && <p>Train</p>}
-                <p>{timer}</p>
+                {rest && <p>{timer}</p>}
+                {workoutFinished && <p>Workout finished!</p>}
+                <div className="feedback-animation">
+                    <p id="feedback">{feedback}</p>
+                </div>
             </div>
         </div>
     );
